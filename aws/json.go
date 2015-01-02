@@ -57,7 +57,8 @@ func (c *JSONClient) Do(op, method, uri string, req, resp interface{}) error {
 		if err := json.Unmarshal(bodyBytes, &jsonErr); err != nil {
 			return err
 		}
-		return jsonErr.Err(httpResp.StatusCode)
+		reqid := httpResp.Header.Get("X-Amzn-RequestId")
+		return jsonErr.Err(httpResp.StatusCode, reqid)
 	}
 
 	if resp != nil {
@@ -71,9 +72,10 @@ type jsonErrorResponse struct {
 	Message string `json:"message"`
 }
 
-func (e jsonErrorResponse) Err(StatusCode int) error {
+func (e jsonErrorResponse) Err(StatusCode int, RequestID string) error {
 	return APIError{
 		StatusCode: StatusCode,
+		RequestID:  RequestID,
 		Type:       e.Type,
 		Message:    e.Message,
 	}
