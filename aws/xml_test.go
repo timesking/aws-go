@@ -4,7 +4,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	"github.com/stripe/aws-go/aws"
+	"github.com/timesking/aws-go/aws"
 )
 
 type XMLRequest struct {

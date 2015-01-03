@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/stripe/aws-go/aws"
+	"github.com/timesking/aws-go/aws"
 )
 
 func TestQueryRequest(t *testing.T) {

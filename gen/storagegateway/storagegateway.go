@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/stripe/aws-go/aws"
-	"github.com/stripe/aws-go/gen/endpoints"
+	"github.com/timesking/aws-go/aws"
+	"github.com/timesking/aws-go/gen/endpoints"
 )
 
 // StorageGateway is a client for AWS Storage Gateway.

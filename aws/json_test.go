@@ -8,7 +8,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/stripe/aws-go/aws"
+	"github.com/timesking/aws-go/aws"
 )
 
 func TestJSONRequest(t *testing.T) {

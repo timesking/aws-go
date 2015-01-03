@@ -7,7 +7,7 @@ package main
 import (
 	"os"
 
-	"github.com/stripe/aws-go/model"
+	"github.com/timesking/aws-go/model"
 )
 
 func main() {

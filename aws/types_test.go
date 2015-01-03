@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/stripe/aws-go/aws"
+	"github.com/timesking/aws-go/aws"
 )
 
 func TestFloatTimestampSerialization(t *testing.T) {
